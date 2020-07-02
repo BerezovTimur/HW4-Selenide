@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/xqbeead2a4j6d20q?svg=true)](https://ci.appveyor.com/project/BerezovTimur/hw4-selenide)
