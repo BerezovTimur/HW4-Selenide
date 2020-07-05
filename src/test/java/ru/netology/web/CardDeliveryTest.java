@@ -36,12 +36,6 @@ public class CardDeliveryTest {
     @Test
     void shouldSubmitEmptyForm() {
         open("http://localhost:9999/");
-        $("[type='text'][placeholder]").setValue("");
-        $("[class='input__control'][type='tel'][placeholder]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[class='input__control'][type='tel'][placeholder]").setValue(date);
-        $("[name='name']").setValue("");
-        $("[name='phone']").setValue("");
-        $("[data-test-id='agreement']").click();
         $("[class='button__text']").click();
         String getText = $("[data-test-id='city']").getText();
         assertEquals("Поле обязательно для заполнения", getText);
