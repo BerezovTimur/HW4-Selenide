@@ -37,8 +37,9 @@ public class CardDeliveryTest {
     void shouldSubmitEmptyForm() {
         open("http://localhost:9999/");
         $("[class='button__text']").click();
-        String getText = $("[data-test-id='city']").getText();
-        assertEquals("Поле обязательно для заполнения", getText);
+        $(byText("Поле обязательно для заполнения")).waitUntil(Condition.visible, 15000);
+        /*String getText = $("[data-test-id='city']").getText();
+        assertEquals("Поле обязательно для заполнения", getText);*/
     }
 
     @Nested
