@@ -38,8 +38,6 @@ public class CardDeliveryTest {
         open("http://localhost:9999/");
         $("[class='button__text']").click();
         $(byText("Поле обязательно для заполнения")).waitUntil(Condition.visible, 15000);
-        /*String getText = $("[data-test-id='city']").getText();
-        assertEquals("Поле обязательно для заполнения", getText);*/
     }
 
     @Nested
